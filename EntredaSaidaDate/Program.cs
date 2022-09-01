@@ -32,11 +32,11 @@ namespace EntredaSaidaDate
                 txt1.WriteLine(d1.ToString());
                 txt1.Close();
                 StreamWriter txt2 = new StreamWriter(targetPath2);
-                txt1.WriteLine(d2.ToString());
-                txt1.Close();
+                txt2.WriteLine(d2.ToString());
+                txt2.Close();
                 StreamWriter txt3 = new StreamWriter(targetPath3);
-                txt1.WriteLine(d3.ToString());
-                txt1.Close();
+                txt3.WriteLine(d3.ToString());
+                txt3.Close();
             }
             catch (Exception)
             {
