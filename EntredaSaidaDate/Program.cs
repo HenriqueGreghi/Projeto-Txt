@@ -1,23 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+
+
 namespace EntredaSaidaDate
 {
     class Program
     {
         static void Main(string[] args)
         {
+            var formatarDatas = new FormatarData();
+            formatarDatas.Converter();
 
+            var listaDeExportacao = new List<ILerECriarArquivo>();
+            listaDeExportacao.Add(new ImprimirArquivo());
 
-
-            ArquivoTxt txt = new ArquivoTxt();
-            txt.LerArquivo();
-
-            txt.CriarArquivo();
-
-            Console.WriteLine(txt.D1);
-            Console.WriteLine(txt.D2);
-            Console.WriteLine(txt.D3);
-
+            foreach (var exportacao in listaDeExportacao)
+            {
+                formatarDatas.EnviarResultado(exportacao);
+            }
         }
     }
 }
