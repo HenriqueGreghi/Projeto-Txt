@@ -32,7 +32,7 @@ namespace EntredaSaidaDate
             var data = LerArquivo();
             _datas = ConverterDatas(data);
         }
-        public void EnviarResultado(ILerECriarArquivo lerECriarArquivo)
+        public void Enviar(ILerECriarArquivo lerECriarArquivo)
         {
             lerECriarArquivo.EnviarResultado(_datas);
         }

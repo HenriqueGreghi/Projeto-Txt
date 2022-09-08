@@ -17,7 +17,14 @@ namespace EntredaSaidaDate
 
             foreach (var exportacao in listaDeExportacao)
             {
-                formatarDatas.EnviarResultado(exportacao);
+                formatarDatas.Enviar(exportacao);
+            }
+
+            var criarArquivos = new List<ILerECriarArquivo>();
+            criarArquivos.Add(new CriarArquivo());
+            foreach (var arquivo in criarArquivos)
+            {
+                formatarDatas.Enviar(arquivo);
             }
         }
     }
